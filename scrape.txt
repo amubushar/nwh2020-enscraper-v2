@@ -1,0 +1,16 @@
+
+propertyList = ['Material', 'Product Dimensions', 'Number of Items', 'Item Weight', 'Parcel Dimensions', 'Shipping Weight'];
+
+var x = document.getElementsByClassName("pdTab");
+
+for (var j = 0; j < x.length; j++) {
+labels = x[j].getElementsByClassName("label");
+	for (var i = 0; i < labels.length; i++) {
+		propertyLoc = propertyList.indexOf(labels[i].innerText);
+		if ( propertyLoc > -1)
+		console.log(propertyList[propertyLoc], ":", labels[i].parentElement.getElementsByClassName("value")[0].innerText);
+	}
+}
+
+
+var productName = document.getElementById("productTitle").innerText;
